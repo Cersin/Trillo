@@ -1,0 +1,92 @@
+/////////////////////////////
+////// HOTEL VIEW /////
+
+///////// GALLERY ///////////
+
+.gallery {
+  display: flex;
+
+
+  &__photo {
+    width: 100%;
+    display: block;
+  }
+}
+
+///////// OVERVIEW ///////////
+
+.overview {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid var(--color-grey-light-4);
+
+  // HEADING //
+  &__heading {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
+  }
+
+  &__stars {
+    margin-right: auto;
+    display: flex;
+
+    &-icon {
+      width: 1.75rem;
+      height: 1.75rem;
+      fill: var(--color-primary);
+    }
+  }
+
+  // LOCATION //
+  &__location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+
+    &-icon {
+      margin-right: .5rem;
+      width: 1.75rem;
+      height: 1.75rem;
+      fill: var(--color-primary);
+    }
+  }
+
+  // RATING //
+  &__rating {
+    color: #fff;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center; // centruje w tym wypadku w cross axis czyli w poziomie
+    justify-content: center; // main axis czyli w pionie
+    align-self: stretch; // jako ze to drugi stopien flexa to stretchujemy element w main axis na ile sie da
+    padding: 0 2rem;
+
+    &:hover &-average {
+      font-size: 2.7rem;
+    }
+
+    &:hover &-count {
+      font-size: 1rem;
+    }
+
+    &-average {
+      font-size: 2.25rem;
+      font-weight: 300;
+      margin-bottom: -3px;
+      transition: all .3s;
+    }
+
+    &-count {
+      font-size: .8rem;
+      text-transform: uppercase;
+      transition: all .3s;
+    }
+  }
+}
+
