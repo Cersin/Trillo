@@ -10,6 +10,12 @@
   flex-direction: column;
   overlow: hidden;
 
+  @media only screen and (max-width: $bp-medium) {
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+
   &::before {
     content: "\201C";
     position: absolute;

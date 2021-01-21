@@ -9,6 +9,12 @@
   display: flex;
   justify-content: space-between; // main axis space-between
   align-items: center; // cross axis center
+
+  @media only screen and (max-width: $bp-smallest) {
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 10rem;
+  }
 }
 
 // LOGO
@@ -24,6 +30,11 @@
   display: flex;
   justify-content: center; // main axis center
   align-items: center; // cross axis center
+
+  @media only screen and (max-width: $bp-smallest) {
+    order: 1;
+    flex: 0 0 100%;
+  }
 
   &__input {
     font-family: inherit;

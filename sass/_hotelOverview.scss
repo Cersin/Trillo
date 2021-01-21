@@ -5,6 +5,7 @@
 
 .gallery {
   display: flex;
+  overflow: hidden;
 
 
   &__photo {
@@ -20,6 +21,7 @@
   flex-direction: row;
   align-items: center;
   border-bottom: var(--line);
+  background-color: var(--color-grey-light-2);
 
   // HEADING //
   &__heading {
@@ -28,6 +30,11 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      padding: 1rem 2rem;
+    }
   }
 
   &__stars {
@@ -67,6 +74,11 @@
     align-self: stretch; // jako ze to drugi stopien flexa to stretchujemy element w main axis na ile sie da
     padding: 0 2rem;
 
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 1.5rem;
+    }
+
     &:hover &-average {
       font-size: 2.7rem;
     }
@@ -80,12 +92,20 @@
       font-weight: 300;
       margin-bottom: -3px;
       transition: all .3s;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 1.8rem;
+      }
     }
 
     &-count {
       font-size: .8rem;
       text-transform: uppercase;
       transition: all .3s;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: .5rem;
+      }
     }
   }
 }
